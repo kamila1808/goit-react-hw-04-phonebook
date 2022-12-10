@@ -38,10 +38,9 @@ const App = () => {
   };
 
 
-  const filterChange = ({ target: { name, value } }) => {
-    setFilter({ [name]: value });
+  const filterChange = event => {
+    setFilter(event.target.value);
   };
-
 
   const filterContacts = () => {
     const filteredContacts = contacts.filter(contact => {
@@ -50,7 +49,7 @@ const App = () => {
     return filteredContacts;
   };
 
-  
+
   return (
     <div>
       <h1>Phonebook</h1>
